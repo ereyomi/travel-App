@@ -37,6 +37,9 @@
     background: #f3f4f5;
     box-shadow: 3px 3px 8px #b1b1b1,
                 -3px -3px 8px #ffffff;
+}
+#entry-form button[type="submit"]:hover {
+     background: #dfdfdf;
 } 
 .activateEntryForm {
     transform: translateY(0%) !important;

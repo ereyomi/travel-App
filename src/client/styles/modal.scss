@@ -77,7 +77,11 @@
     margin: 10px 0px;
 }
 #saveTrip {
-
     background: tomato;
     color: white;
+    border: 1px solid tomato;
+}
+#saveTrip:hover {
+    background: white;
+    color: tomato;
 }
