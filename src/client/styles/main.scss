@@ -1,0 +1,82 @@
+html {
+  scroll-behavior: smooth;
+}
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: #ecf0f3; */
+}
+button {
+    outline: none;
+    border:none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    padding: 20px 30px;
+}
+#container {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    overflow: hidden;
+    
+}
+
+#mainBody {
+    padding-top: 200px;
+}
+
+@media screen and (min-width: 600px) {
+    #mainBody {
+        padding-top: 150px;
+    }
+    .flight-info {
+        grid-template-columns: 50% 650%;
+    }
+}
+@media screen and (min-width: 800px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "a a b b"
+                            "a a d d"
+                            "c c d d"
+                            "c c f f ";
+        grid-gap: 20px;
+        align-items: flex-start;
+    }
+    .a {
+        grid-area: a;
+    }
+    .b {
+        grid-area: b;
+    }
+    .c {
+        grid-area: c;
+    }
+    .d {
+        grid-area: d;
+    }
+    .boxes button {
+        display: block;
+        font-size: 1rem;
+    }
+}
+
+
+.noData {
+    text-align: center;
+    font-size: 2rem;
+}

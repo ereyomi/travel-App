@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel App</title>
+    </head>
+    <link rel="stylesheet" href="index.css">
+
+    <body>
+        <div id="container">
+            <header id="header">
+                <p class="title">Travel Planner</p>
+
+                <div class="trip-header">
+                    <p>my Trip</p>
+                    <button id="addTrip">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        add trip
+                    </button>
+                </div>
+            </header>
+
+            <main id="mainBody">
+                <section id="trips-card-box">
+                    <!-- <div class="cards">
+                        <div class="boxes a">
+                            <div class="imageHold">
+                                <img src="./media/aaa.jpg" alt="aaa" srcset="">
+                            </div>
+                        </div>
+                        <div class="boxes b">
+                            <p class="trip-to">
+                                My trip to: Paris, France
+                            </p>
+                            <p class="departure ">
+                                Departing: 2020-06-29
+                            </p>
+                        </div>
+                        <div class="boxes c">
+                            <p>Paris, France is 220 days away</p>
+                            <p>Typical Weather for then is</p>
+                            <p>High - 46, low - 35</p>
+                            <p>Most cloudy throughout the day</p>
+                        </div>
+                        <div class="boxes d">
+                            <button id="removeTrip">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                remove Trip
+                            </button>
+                            <button id="addNote">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                add note
+                            </button>
+                        </div>
+                    </div> -->
+                </section>
+
+            </main>
+            <!-- Entry form -->
+            <section id="entry-field">
+                <form id="entry-form" class="">
+                    <input id="entry-location" type="text" name="input" value="" placeholder="Your location">
+                    <input id="entry-date" type="date" name="input" value="">
+                    <button id="submitIt" type="submit">
+                        search Trip
+                    </button>
+                </form>
+            </section>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close">&times;</span>
+                        <h2>Your Search</h2>
+                    </div>
+                    <div class="modal-body">
+                        <!--  <div class="imageHold">
+                            <img src="./aaa.jpg" alt="aaa" srcset="">
+                        </div>
+                        <div class="details">
+                            <p>Paris, France is 220 days away</p>
+                            <p>Typical Weather for then is</p>
+                            <p>High - 46, low - 35</p>
+                            <p>Most cloudy throughout the day</p>
+                        </div>-->
+                    </div>
+                    <div class="modal-footer">
+                        <button id="saveTrip">
+                            save
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Modal -->
+
+        </div>
+        <script src="all.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+
+</html>

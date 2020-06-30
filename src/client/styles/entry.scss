@@ -1,0 +1,43 @@
+#entry-field {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+    transform: translateY(100%);
+    transition: all 0.6s ease-in-out;
+}
+#entry-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+#entry-form input {
+    width: 100%;
+    border: none;
+    outline:none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0px;
+    padding:20px 10px 20px 5px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #f0efef;
+}
+#entry-form button[type="submit"] {
+    color: rgb(102, 101, 101);
+    border-radius: 25px;
+    margin: 20px 0px;
+    background: #f3f4f5;
+    box-shadow: 3px 3px 8px #b1b1b1,
+                -3px -3px 8px #ffffff;
+} 
+.activateEntryForm {
+    transform: translateY(0%) !important;
+}
