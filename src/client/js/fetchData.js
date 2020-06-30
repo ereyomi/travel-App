@@ -66,4 +66,4 @@ const getPixData = ( { location, countryName } ) => {
     } )
 }
 
-export {getData, getPixData}
+export { getData, getPixData }

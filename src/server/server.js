@@ -225,7 +225,8 @@ app.post( '/api/getImage', getPix )
 
 
 // designates what port the app will listen to for incoming requests
-app.listen( 8081, () => {
+const port = 8081;
+app.listen( process.env.PORT || port, () => {
     console.log('app listening on port 8081!')
 })
 
