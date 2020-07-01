@@ -80,8 +80,20 @@
     background: tomato;
     color: white;
     border: 1px solid tomato;
+
 }
 #saveTrip:hover {
     background: white;
     color: tomato;
+}
+
+@media screen and (min-width: 600px) {
+    .modal-content {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 800px) {
+    .modal-content {
+        width: 50%;
+    }
 }
