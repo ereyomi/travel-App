@@ -77,6 +77,13 @@ This will assemble the templates, static assets, Sass, and JavaScript. You can v
 `http://localhost:8081`
 
 
+### Run tests
+
+To run the tests, run
+```bash
+npm test
+```
+
 ## Authors
 
 [Ereyomi Oluwaseyi](https://github.com/ereyomi)
