@@ -2,7 +2,7 @@ import { openModalAndPopulateWithData, updateUi } from './Ui'
 import { getData, getPixData } from './fetchData'
 import { saveTrip } from './localStorage'
 
-const myapp = () => {
+export const app = () => {
     
     updateUi()
 
@@ -98,5 +98,3 @@ const myapp = () => {
 
     
 }
-
-export { myapp }

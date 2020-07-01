@@ -1,4 +1,4 @@
-import { myapp } from './js/app'
+import { app } from './js/app'
 import './js/all.min'
 
 
@@ -13,4 +13,4 @@ import './styles/modal.scss';
 import './media/aaa.jpg';
 
 
-window.addEventListener("DOMContentLoaded", myapp);
+window.addEventListener("DOMContentLoaded", app);

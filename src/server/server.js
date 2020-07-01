@@ -33,6 +33,12 @@ app.use((req, res, next) => {
   next()
 });
 
+// designates what port the app will listen to for incoming requests
+
+app.listen( process.env.PORT || 8081, () => {
+    console.log('app listening on port 8081!')
+} )
+
 /* global keys */
 const weatherApiKey = process.env.WEATHER_BIT_API_KEY 
 const pixabayApiKey = process.env.PIXABAY_API_KEY
@@ -224,11 +230,8 @@ app.post( '/api/getData', getData )
 app.post( '/api/getImage', getPix )
 
 
-// designates what port the app will listen to for incoming requests
-const port = 8081;
-app.listen( process.env.PORT || port, () => {
-    console.log('app listening on port 8081!')
-})
 
 
 
+
+module.exports = app
