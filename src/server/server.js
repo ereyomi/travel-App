@@ -44,10 +44,13 @@ const weatherApiKey = process.env.WEATHER_BIT_API_KEY
 const pixabayApiKey = process.env.PIXABAY_API_KEY
 const geonamesUsername = process.env.GEONAMES_USERNAME
 
-const getCoordinate = ( { location } ) => {
+const getCoordinate = ( location, geoname = '' ) => {
+
+    geoname ? geoname : ( geoname = geonamesUsername )
+    const coordinateApi = `http://api.geonames.org/searchJSON?q=${ location }&maxRows=1&username=${ geoname }`;
     return new Promise( async ( resolve, reject ) => {
         
-        const coordinateApi = `http://api.geonames.org/searchJSON?q=${ location }&maxRows=1&username=${ geonamesUsername }`;
+        
         
         try {
             const fetchData = await fetch( coordinateApi )
@@ -176,7 +179,7 @@ const getData = ( req, res ) => {
         oneDay,
         days
     }
-        getCoordinate( dataToSend )
+    getCoordinate( location )
             .then( data => {
                 dataToSend = {
                     ...dataToSend,
@@ -234,4 +237,6 @@ app.post( '/api/getImage', getPix )
 
 
 
-module.exports = app
+//module.exports = app
+
+exports.getCoordinate = getCoordinate

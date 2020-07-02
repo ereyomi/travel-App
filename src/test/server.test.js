@@ -1,11 +1,15 @@
-const app = require('../server/server');
-const supertest = require('supertest');
-const request = supertest(app);
+const { getCoordinate } = require( '../server/server')
 
-describe('get endpoints correct', () => {
-    it ('return html file', async done => {
-        const res =  await request.get('/')
-        expect(res.status).toBe(200);
-        done();
-    })
-})
+
+describe( "Test: the function 'getCoordinates()'", () => {
+
+   test( 'It should be defined', async (done) => {
+        await getCoordinate( 'lagos', 'ereyomi' ).then(
+            data => {
+                expect( data.geonames[0].name ).toBe('Lagos')
+            }
+        )
+        done()
+    } ); 
+
+} );
